@@ -16,10 +16,13 @@ export function Container() {
 
   Object.defineProperty(this, 'scrollTop', {
     get() {
+      return document.documentElement.scrollTop || document.body.scrollTop;
+      /*
       return window.scrollY ||
         window.pageYOffset ||
         document.body.scrollTop ||
         document.documentElement.scrollTop;
+      */
     },
     set(v) {
       return window.scrollY =
