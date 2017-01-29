@@ -501,7 +501,8 @@ const VerticalCollection = Component.extend({
           this.set('_firstVisibleIndex', bottomComponentIndex);
           this.sendActionOnce('firstVisibleChanged', {
             item: component,
-            index: bottomComponentIndex
+            index: bottomComponentIndex,
+            scroll: this.radar.scrollY
           });
         }
 
